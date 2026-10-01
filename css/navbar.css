@@ -1,0 +1,120 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    min-height: 100px;
+    padding: 10px 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    width: 250px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #172b4d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+    padding: 10px 0;
+
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #07558a;
+}
+
+.main-nav a.active {
+    color: #07558a;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.logout {
+    color: #07558a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+
+/* Prilagodba za manje ekrane */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 10px 30px;
+        gap: 20px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .main-nav a {
+        font-size: 15px;
+    }
+
+    .user-info {
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 190px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .user-info {
+        gap: 15px;
+    }
+}
